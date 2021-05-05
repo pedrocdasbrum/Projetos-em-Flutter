@@ -38,6 +38,7 @@ abstract class Conta {
   Agencia get getAgencia => this.agencia;
   Cliente get getCliente => this.cliente;
   double get getSaldo => this.saldo;
+  
   //setters
   set setNumero(int valor) => this.numero = valor;
   set setAgencia(Agencia valor) => this.agencia = valor;
