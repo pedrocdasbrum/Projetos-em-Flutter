@@ -1,12 +1,11 @@
 import 'agencia.dart';
 import 'cliente.dart';
 
-class Conta {
+abstract class Conta {
   int numero;
   Agencia agencia;
   Cliente cliente;
   double saldo;
-  double limite;
 
   //Método Construtor
   Conta({
@@ -14,7 +13,6 @@ class Conta {
     required this.agencia,
     required this.cliente,
     required this.saldo,
-    required this.limite,
   });
 
   String obterSaldo() {
@@ -40,12 +38,9 @@ class Conta {
   Agencia get getAgencia => this.agencia;
   Cliente get getCliente => this.cliente;
   double get getSaldo => this.saldo;
-  double get getLimite => this.limite;
-
   //setters
   set setNumero(int valor) => this.numero = valor;
   set setAgencia(Agencia valor) => this.agencia = valor;
   set setCliente(Cliente valor) => this.cliente = valor;
   set setSaldo(double valor) => this.saldo = valor;
-  set setLimite(double valor) => this.limite = valor;
 }
