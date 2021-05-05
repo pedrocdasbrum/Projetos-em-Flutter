@@ -1,6 +1,7 @@
 import 'endereco.dart';
+import 'pessoa.dart';
 
-class Cliente {
+class Cliente extends Pessoa {
   String nome;
   String rg;
   String cpf;
@@ -16,7 +17,12 @@ class Cliente {
     required this.telefoneParaContato,
     required this.email,
     required this.endereco,
-  });
+  }) : super(
+          nome: nome,
+          endereco: endereco,
+          email: email,
+          telefoneParaContato: telefoneParaContato,
+        );
 
   //Getters
   String get getNome => this.nome;
