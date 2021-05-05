@@ -1,3 +1,5 @@
+import 'models/cliente.dart';
+import 'models/conta_corrente.dart';
 import 'models/endereco.dart';
 import 'models/agencia.dart';
 import 'models/gerente.dart';
@@ -28,6 +30,29 @@ void main() {
   );
 
   Agencia agencia1 = Agencia(45, endereco1, gerente);
+
+  Cliente pedro = Cliente(
+    nome: "Pedro",
+    email: "pedro@web.com.br",
+    cpf: "982.224.232-43",
+    rg: "3233454",
+    telefoneParaContato: "(51) 98342-3324",
+    endereco: Endereco(
+      rua: "Luis Camoes",
+      numero: "12A",
+      bairro: "Santo Antonio",
+      cidade: "Porto Alegre",
+      estado: "RS",
+    ),
+  );
+
+  ContaCorrente conta1 = ContaCorrente(
+    numero: 12346,
+    cliente: pedro,
+    limite: 30000,
+    agencia: agencia1,
+    saldo: 0,
+  );
 
   //print -> Imprime informações no console
   print(agencia1);
